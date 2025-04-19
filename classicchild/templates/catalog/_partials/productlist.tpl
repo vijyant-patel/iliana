@@ -1,32 +1,11 @@
-{**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.md.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
- *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
- * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- *}
- {assign var="categories" value=$menu.children}
+{assign var=products_to_show value=$products|@array_slice:0:3}
 
-<div class="products{if !empty($cssClass)} {$cssClass}{/if}" itemscope itemtype="http://schema.org/ItemList">
-    {* {include file="catalog/_partials/main_banner.tpl" categories=$categories} *}
-    {foreach from=$products item="product" key="position"}
-        {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position}
-    {/foreach}
-</div>
+<section class="featured-gallery-wrapper">
+  {foreach from=$products_to_show item=product}
+    <a href="{$product.url}" class="featured-gallery-img" style="background-image: url('{$product.cover.bySize.home_default.url}');">
+        {* <div class="gallery-overlay">
+            <h2>{$product.name|truncate:30:'...'}</h2>
+        </div> *}
+    </a>
+  {/foreach}
+</section>
