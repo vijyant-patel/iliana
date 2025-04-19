@@ -1,0 +1,434 @@
+/* Adjust margin for #header .header-nav on large screens or smaller */
+@media (max-width: 1200px) {
+  #header .header-nav {
+    margin-bottom: 5px; /* Adjust the value as needed */
+  }
+}
+#mobile_logo {
+  margin-left: 3rem;
+}
+/* Ensure carousel has fixed height */
+#carousel {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 60vh;
+  max-height: 800px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure inner and items have full height */
+#carousel .carousel-inner,
+#carousel .carousel-item,
+#carousel .carousel-item a,
+#carousel .carousel-item figure {
+  height: 100%;
+}
+
+/* Make image cover */
+#carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Caption Style Fix */
+#carousel .carousel-item figcaption.caption {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  max-width: 50%;
+  color: #fff;
+  z-index: 10;
+  text-align: left;
+}
+
+/* Title inside caption */
+#carousel .carousel-item figcaption.caption h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+/* Description inside caption */
+#carousel .carousel-item .caption-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+}
+#carousel .carousel-item figcaption.caption {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2); /* Light dark overlay */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+#carousel .caption {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 500px;
+}
+
+#carousel .caption h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+#carousel .caption-description {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.carousel-control .material-icons {
+  font-size: 3rem;
+  color: #fff;
+}
+
+address, dl, ol, ul {
+  margin-bottom: 0rem !important;
+}
+
+#_mobile_search {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#_mobile_search i {
+  font-size: 24px;
+  color: #333;
+}
+
+/* nav bar */
+.navbar-nav {
+  margin-left: 20em;
+}
+
+/* iliana header_nav start */
+.iliana-header-nav {
+  border-bottom: 0px !important;
+}
+
+.iliana-header-nav img {
+  max-width: 50%;
+  width: 20%;
+  height: auto;
+}
+
+#_desktop_user_info {
+  a {
+    i {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+#cart-label {
+  display: none;
+}
+
+.header-element {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ---------------------------------------- search bar --------------------------------- */
+#search_widget {
+  display: inline-block;
+}
+
+.search-bar-wrapper {
+  position: fixed;
+  top: -70px;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+  display: none;
+}
+
+.search-bar-wrapper.active {
+  z-index: 10;
+  top: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ff0000;
+}
+
+#search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* ------------------------------- navbar --------------------------------- */
+.simple-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Makes items align horizontally */
+  gap: 30px; /* Space between menu items */
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.simple-nav li {
+  display: block;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.simple-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 12px;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+  white-space: nowrap; /* Prevent text from wrapping inside links */
+  display: inline-block; /* Ensure hover effect is only as wide as the text */
+  position: relative; /* Required for hover effect */
+}
+
+.simple-nav a:hover,
+.simple-nav a.active {
+  color: #283b50;
+}
+
+.simple-nav a:hover::after,
+.simple-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Match the width of the text */
+  height: 2px; /* Thickness of the border */
+  background-color: #283b50; /* Border color */
+}
+
+@media (max-width: 768px) {
+  .simple-nav {
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between menu items */
+  }
+}
+
+/* ---------- mobile menu ------------ */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -50%; /* Ensure it's hidden by default */
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  padding-top: 70px; /* Add space below the menu icon */
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ensure the menu spans the full width */
+}
+
+.mobile-menu ul li {
+  width: 100%; /* Ensure items span the full width */
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px; /* Slightly smaller font size */
+  display: inline-block; /* Ensure hover effect is only as wide as the text */
+  margin-left: 20px;
+  text-align: left; /* Align text to the left */
+  position: relative; /* Required for hover effect */
+}
+
+.mobile-menu ul li a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Match the width of the text */
+  height: 2px; /* Thickness of the border */
+  background-color: #283b50; /* Border color */
+}
+
+.mobile-menu.open {
+  display: flex; /* Show the menu when open */
+  left: 0;
+}
+
+#mobile-menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  display: none; /* Hidden by default */
+}
+
+/* Show mobile navbar only on small screens */
+@media (max-width: 768px) {
+  .mobile-navbar {
+    display: block;
+  }
+
+  #mobile-menu-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+
+  .mobile-menu {
+    display: flex; /* Show menu on mobile */
+  }
+
+  #_desktop_top_menu {
+    display: none;
+  }
+}
+
+/* Reset mobile menu for desktop view */
+@media (min-width: 769px) {
+  .mobile-menu {
+    left: -50% !important;
+    display: none !important;
+  }
+
+  #mobile-menu-toggle {
+    display: none !important;
+  }
+
+  #_desktop_top_menu {
+    display: block; /* Show the desktop menu */
+  }
+}
+
+/* Submenu styles */
+.simple-nav .has-submenu {
+  position: relative;
+}
+
+.simple-nav .submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  width: 200px;
+}
+
+.simple-nav .submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.simple-nav .submenu ul li {
+  margin: 5px 0;
+}
+
+.simple-nav .submenu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  display: inline-block; /* Ensure hover effect is only as wide as the text */
+  padding: 5px;
+  position: relative; /* Required for hover effect */
+}
+
+.simple-nav .submenu ul li a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Match the width of the text */
+  height: 2px; /* Thickness of the border */
+  background-color: #283b50; /* Border color */
+}
+
+.simple-nav .has-submenu:hover .submenu {
+  display: block; /* Show submenu on hover */
+}
+
+/* ------------------------------------- navbar end --------------------------------- */
+
+.material-icons {
+  font-size: 26px; /* Adjust the size as needed */
+}
+
+.custom-block {
+  background-color: #f9f9f9;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.iliana-row {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* iliana header_nav end */
+
+
+/* products design start */
+

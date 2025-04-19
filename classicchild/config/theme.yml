@@ -1,0 +1,12 @@
+name: classicchild
+display_name: Classic Child Theme
+parent: classic
+assets:
+  use_parent_assets: true
+
+  
+# global_settings:
+#   hooks:
+#     modules_to_hook:
+#       displayHome:
+#         - ps_imageslider
