@@ -42,6 +42,11 @@
         <div class="hidden-md-up text-sm-center mobile">
           <div class="float-xs-right" id="_mobile_cart"></div>
           <div class="float-xs-right" id="_mobile_user_info"></div>
+          <div class="float-xs-right" id="_mobile_searchbar">
+            <button type="button" id="mobile-search-button" onclick="toggleMobileSearchBar()">
+              <i class="material-icons search">&#xE8B6;</i>
+            </button>
+          </div>
           <div class="top-logo" id="mobile_logo">
             <a href="{$urls.base_url}">
               <img src="{$urls.theme_assets}img/iliana.PNG" alt="test">
@@ -75,9 +80,9 @@
         <div class="col-md-11 col-sm-12 position-static">
           <div class="row">
             {widget name="ps_mainmenu"}
-            <div class="col-md-6 col-lg-6 text-sm-center text-md-left mx-0">
+            <div class="col-md-6 col-lg-6 text-md-left mx-0">
               <div class="row">
-                <div class="col-md-12 text-right hidden-sm-down">
+                <div class="col-md-12 col-lg-12 text-md-right">
                   {widget name="ps_searchbar"}
                   {widget name="ps_customersignin"}
                   {widget name="ps_shoppingcart"}

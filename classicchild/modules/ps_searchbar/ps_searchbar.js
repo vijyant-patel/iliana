@@ -48,6 +48,12 @@ $(document).ready(function () {
 
 const showSearchInput = () => {
     const searchBar = document.querySelector(".search-bar-wrapper");
+    var header = document.querySelector("#header.navbar-header");
+    if (searchBar && header) {
+        header.insertAdjacentElement("afterend", searchBar);
+    } else {
+        console.log("Search bar or header not found");
+    }
     searchBar.classList.toggle("active");
 };
 function closeSearchBar() {

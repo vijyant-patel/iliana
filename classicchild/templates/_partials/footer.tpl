@@ -22,22 +22,25 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<!-- Block search module TOP -->
-<div id="search_widget" class="" data-search-controller-url="{$search_controller_url}">
-    <form method="get" action="{$search_controller_url}" class="search-form">
-    <input type="hidden" name="controller" value="search">
-    
-    <div class="search-bar-wrapper">
-        <i class="material-icons search-icon">&#xE8B6;</i> <!-- Search icon -->
-        <input type="text" id="search-bar" class="search-input" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
-        <button type="button" class="close-button p-0" onclick="closeSearchBar()">×</button>
+<div class="footer-container">
+  <div class="container">
+    <div class="row">
+      {block name='hook_footer'}
+        {hook h='displayFooter'}
+      {/block}
     </div>
-    
-    <button type="button" id="search-button" class="p-0" onclick="showSearchInput()">
-        <i class="material-icons search hidden-sm-down">&#xE8B6;</i>
-        <span class="hidden-xl-down">{l s='Search' d='Shop.Theme.Catalog'}</span>
-    </button>
-    </form>
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-sm-center">
+          {block name='copyright_link'}
+            <a class="_blank" href="#" rel="nofollow">
+              {l s='%copyright% %year% - ILIANA. All Rights Reserved.' sprintf=['%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+            </a>
+          {/block}
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
-
-<!-- /Block search module TOP -->
