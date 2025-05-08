@@ -49,6 +49,6 @@
     {hook h='displayMyAccountBlock'}
 	</ul>
 </div> *}
-{block name='hook_footer_before'}
+{* {block name='hook_footer_before'}
   {hook h='displayFooterBefore'}
-{/block}
+{/block} *}

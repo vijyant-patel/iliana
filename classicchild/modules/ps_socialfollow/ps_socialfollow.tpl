@@ -32,7 +32,7 @@
     </ul>
   </div>
 {/block} *}
-<div class="block-social col-lg-4 col-md-12 col-sm-12">
+<div class="block-social col-lg-4 col-md-12 col-sm-12 hidden-sm-down">
     <ul>
       <li class="facebook">
         <a href="https://facebook.com" target="_blank" title="Facebook">

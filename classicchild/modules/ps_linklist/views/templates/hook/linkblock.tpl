@@ -59,7 +59,7 @@
 <div class="col-md-4 links">
   <div class="row">
     <div class="col-md-12 wrapper">
-      <p class="h3 hidden-sm-down">Static Block Title 1</p>
+      <p class="h3 hidden-sm-down hidden-md-up">Static Block Title 1</p>
       <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_1" data-toggle="collapse">
         <span class="h3">Static Block Title 1</span>
         <span class="float-xs-right">
@@ -72,12 +72,22 @@
       <ul id="footer_sub_menu_1" class="collapse">
         <li>
           <a id="link-1-1" class="link-class" href="https://example.com/page1" title="Description 1">
-            Link Title 1
+            New Arrivals
           </a>
         </li>
         <li>
           <a id="link-1-2" class="link-class" href="https://example.com/page2" title="Description 2">
-            Link Title 2
+            Fundamentals
+          </a>
+        </li>
+        <li>
+          <a id="link-1-2" class="link-class" href="https://example.com/page2" title="Description 2">
+            Essentials
+          </a>
+        </li>
+        <li>
+          <a id="link-1-2" class="link-class" href="https://example.com/page2" title="Description 2">
+            Ready to Wear
           </a>
         </li>
       </ul>

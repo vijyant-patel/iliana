@@ -25,8 +25,23 @@
 <div class="footer-container">
   <div class="container">
     <div class="row">
+      {block name='hook_footer_before'}
+        <div class="hidden-md-up">
+          {hook h='displayFooterBefore'}
+        </div>
+      {/block}
       {block name='hook_footer'}
         {hook h='displayFooter'}
+      {/block}
+      {block name='hook_footer_before'}
+        <div class="hidden-sm-down">
+          {hook h='displayFooterBefore'}
+        </div>
+      {/block}
+      {block name='social_links'}
+        <div class="hidden-md-up">
+        {include file='_partials/social-links.tpl'}
+        </div>
       {/block}
     </div>
     <div class="row">
